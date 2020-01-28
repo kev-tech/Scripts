@@ -1,9 +1,10 @@
+#Uses python 2 for easier share with coworkers.
 import urllib2
 import re
 import subprocess
 import time
 
-url = '' #URL to crawl.
+url = 'https://store.ui.com/products/unifi-dream-machine' #URL to crawl.
 page = urllib2.urlopen(url).read()
 result = ''
 
