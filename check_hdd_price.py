@@ -18,14 +18,22 @@ result = ''
 price = ''
 
 def check_price():
-    price = soup.find('price-current')    
+    price = soup.find('div', attrs={'class':'aside'})
+    for child in price.children:
+      print(child)
     message = 'price is: {}'.format(price)
+    print(message) #To delete.
 
 def send_email():
     check_price()
-    context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
-        server.login(sender, password) #Change email address to send from here.
-        server.sendmail(sender, recipient, message)
+    # context = ssl.create_default_context()
+    # with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
+    #     server.login(sender, password) #Change email address to send from here.
+    #     server.sendmail(sender, recipient, message)
 
 send_email()
+
+#TODO: 
+# - Incorrectly searching for aside/price-current HTML class.
+# - Add other urls to crawl. 
+# - Format email. 
