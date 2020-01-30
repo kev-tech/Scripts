@@ -18,9 +18,7 @@ result = ''
 price = ''
 
 def check_price():
-    price = soup.find('div', attrs={'class':'aside'})
-    for child in price.children:
-      print(child)
+    price = soup.find('div', attrs={'div':'aside'})
     message = 'price is: {}'.format(price)
     print(message) #To delete.
 
