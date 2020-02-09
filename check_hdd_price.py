@@ -35,3 +35,4 @@ send_email()
 # - Incorrectly searching for aside/price-current HTML class.
 # - Add other urls to crawl. 
 # - Format email. 
+# - Test Comment
