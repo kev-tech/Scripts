@@ -4,7 +4,7 @@
 python << END
 import subprocess
 
-#Replace your-interface-name and your-network-name appropriately. Ie. en0 for interface and Teacher-WiFI for SSID name.  
+#Replace 'your-interface-name' and 'your-network-name' appropriately. Ie. en0 for interface and Teacher-WiFI for SSID name.  
 subprocess.check_output(['sudo', 'networksetup', '-removepreferredwirelessnetwork', 'your-interface-name', 'your-ssid-name'])
 
 END
