@@ -14,13 +14,9 @@ title_print = print(title[0].text.strip())
 price_print = print(price[0].text.strip())
 shipping_print = print(shipping[0].text.strip())
 
-
 # Outputs All Products
-for r in title:
-    print(r.text.strip())
 
-for r in price:
-    print(r.text.strip())
-    
-for r in shipping:
-    print(r.text.strip())
+
+for t,p,s in zip(title, price, shipping):
+    print(f"{t.text.strip()} \n {p.text.strip()} \n {s.text.strip()}")
+    print('\n')
